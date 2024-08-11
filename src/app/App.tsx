@@ -1,10 +1,8 @@
-import React from 'react';
-
+import { Page } from './Page.js';
 export const App: React.FC = () => {
   return (
-    <div>
-      <h1>React Server Component Example</h1>
+    <Page>
       <p>Hello world</p>
-    </div>
+    </Page>
   );
 };
