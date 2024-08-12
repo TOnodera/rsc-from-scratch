@@ -1,6 +1,6 @@
 import React from 'react';
-import { Page } from './Page.js';
-import { Client } from './server/Client.js';
+import { Page } from '../Page.js';
+import { Client } from './Client.js';
 
 export const App: React.FC = () => {
   return (
