@@ -2,14 +2,6 @@
 import rsdws from 'react-server-dom-webpack/server';
 const { renderToPipeableStream } = rsdws;
 import { App } from './app/App.js';
+import { bundlerConfig } from './app/server/Client.js';
 
-const bundlerConfig = {
-  'src/app/Clock.tsx': {
-    Clock: {
-      id: 'Clock.tsx',
-      name: 'Clock',
-      chunks: ['pika', 'chue'],
-    },
-  },
-};
 renderToPipeableStream(<App />, bundlerConfig).pipe(process.stdout);
