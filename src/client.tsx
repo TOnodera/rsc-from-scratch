@@ -1,7 +1,7 @@
 //@ts-expect-error
 import { createFromReadableStream } from 'react-server-dom-webpack/client';
 import { use } from 'react';
-import { createRoot } from 'react-dom/client';
+import { createRoot, hydrateRoot } from 'react-dom/client';
 import { Clock } from './app/client/Clock.js';
 
 const app = document.getElementById('app');
@@ -43,4 +43,4 @@ const Container: React.FC = () => {
   return use(chunk);
 };
 
-createRoot(app).render(<Container />);
+hydrateRoot(app, <Container />);
